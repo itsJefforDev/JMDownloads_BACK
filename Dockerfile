@@ -17,4 +17,4 @@ RUN npm install
 EXPOSE 4000
 
 # Comando de inicio
-CMD ["node", "server.js"]
+CMD ["node", "index.js"]
