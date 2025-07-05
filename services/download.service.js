@@ -26,7 +26,9 @@ exports.processDownload = async (url, format, res) => {
       throw new Error('Formato no soportado');
     }
 
-    const ytdlp = spawn('yt-dlp', args);
+    // const ytdlp = spawn('yt-dlp', args);
+    const ytdlp = spawn('python3', ['-m', 'yt_dlp', ...args]);
+
 
     ytdlp.stdout.pipe(res);
 
